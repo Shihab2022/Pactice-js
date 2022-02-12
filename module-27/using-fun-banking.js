@@ -1,27 +1,17 @@
-function getValueFromInput() {
+function getValueFromInput(inputValue) {
 
-    const dipositeInput = document.getElementById('deposit-input');
+    const dipositeInput = document.getElementById(inputValue);
     const inpitNewValue = dipositeInput.value;
     const dipositeinputValue = parseFloat(inpitNewValue);
-
     dipositeInput.value = '';
     return dipositeinputValue;
 }
 
-function previosBalence() {
+function previosBalence(previosBalence) {
 
-    const dipositetotal = document.getElementById('deposit-total').innerText;
+    const dipositetotal = document.getElementById(previosBalence).innerText;
     const dipositetotalValue = parseFloat(dipositetotal);
     return dipositetotalValue;
-
-}
-
-function balenseTotal() {
-    const preBalence = document.getElementById('balance-total').innerText;
-
-    const preBalenseValue = parseFloat(preBalence);
-    console.log(preBalenseValue);
-    return preBalenseValue;
 
 }
 
@@ -30,15 +20,25 @@ function addTwoNumber(num1, num2) {
     return totalTwoNumber;
 }
 
+// for deposite 
+
 function dipositeBalence() {
-    const dipositetotal = document.getElementById('deposit-total');
-    const getValueInputFrom = getValueFromInput();
-    const previousDiposite = previosBalence();
-    dipositetotal.innerText = addTwoNumber(getValueInputFrom, previousDiposite)
-
+    const dipositeTotal = document.getElementById('deposit-total');
+    const getValueInputFrom = getValueFromInput('deposit-input');
+    const previousDiposite = previosBalence('deposit-total');
+    dipositeTotal.innerText = addTwoNumber(getValueInputFrom, previousDiposite)
     const preBalence = document.getElementById('balance-total');
-    const previousBalece = balenseTotal();
+    const previousBalece = previosBalence('balance-total');
     preBalence.innerText = addTwoNumber(previousBalece, getValueInputFrom)
+}
 
+function withdrawBalence() {
+
+
+    const withdrawTotal = document.getElementById('withdraw-total');
+    const getValueInputFrom = getValueFromInput();
+    const previousWithdraw = previosBalence();
+    withdrawTotal.innerText = addTwoNumber(getValueInputFrom, previousWithdraw);
+    console.log(withdrawTotal);
 
 }
