@@ -1,5 +1,4 @@
 function getValueFromInput(inputValue) {
-
     const dipositeInput = document.getElementById(inputValue);
     const inpitNewValue = dipositeInput.value;
     const dipositeinputValue = parseFloat(inpitNewValue);
@@ -8,20 +7,16 @@ function getValueFromInput(inputValue) {
 }
 
 function previosBalence(previosBalence) {
-
     const dipositetotal = document.getElementById(previosBalence).innerText;
     const dipositetotalValue = parseFloat(dipositetotal);
     return dipositetotalValue;
-
 }
 
 function addTwoNumber(num1, num2) {
     const totalTwoNumber = num1 + num2;
     return totalTwoNumber;
 }
-
 // for deposite 
-
 function dipositeBalence() {
     const dipositeTotal = document.getElementById('deposit-total');
     const getValueInputFrom = getValueFromInput('deposit-input');
@@ -33,12 +28,11 @@ function dipositeBalence() {
 }
 
 function withdrawBalence() {
-
-
     const withdrawTotal = document.getElementById('withdraw-total');
-    const getValueInputFrom = getValueFromInput();
-    const previousWithdraw = previosBalence();
+    const getValueInputFrom = getValueFromInput('withdraw-input');
+    const previousWithdraw = previosBalence('withdraw-total');
     withdrawTotal.innerText = addTwoNumber(getValueInputFrom, previousWithdraw);
-    console.log(withdrawTotal);
-
+    const preBalence = document.getElementById('balance-total');
+    const previousBalece = previosBalence('balance-total');
+    preBalence.innerText = previousBalece - getValueInputFrom;
 }
