@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- telwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>calculator</title>
+
+    <style>
+        .cal-button {
+            height: 80px;
+            width: 80px;
+            padding: 10px;
+            border-radius: 50%;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+            font-size: 25px;
+            font-weight: bold;
+            box-shadow: 0 10px 10px 10px rgba(255, 255, 200, 0.2), 0 10px 30px 0 rgba(200, 255, 255, 0.19);
+            transition: .5s;
+        }
+        
+        .cal-button:hover {
+            /* box-shadow: none; */
+            box-shadow: 5px 5px;
+            background: white;
+            color: black;
+        }
+        
+        .text-area {
+            width: 100%;
+            height: 80px;
+            /* border: 2px solid red; */
+            direction: rtl;
+            border-radius: 10px;
+            font-size: 30px;
+            letter-spacing: 1px;
+            /* align-items: center; */
+        }
+        
+        .operator {
+            background-color: rgb(36, 64, 223);
+            color: white;
+        }
+        /* .clear {
+            width: 200%;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class=" bg-gradient-to-r from-purple-500 bg-cover bg-center grid  justify-center align-center py-16  bg-no-repeat to-pink-500">
+        <div class=" my-5">
+            <div class="input-field">
+                <textarea id="text-field" class="text-area my-5" name="" id="">0</textarea>
+            </div>
+            <div class="grid grid-cols-4 justify-center align-center gap-4 ">
+                <div onclick="clearDisplay('C')" class="clear cal-button text-white bg-rose-600">C</div>
+                <div onclick="del()" class="cal-button bg-purple-900 text-white">Del</div>
+                <div onclick="numShow('%')" class="cal-button">%</div>
+                <div onclick="numShow('*')" class="operator cal-button">x</div>
+                <div onclick="numShow('7')" id="number-btn" class="cal-button">7</div>
+                <div onclick="numShow('8')" id="number-btn" class="cal-button">8</div>
+                <div onclick="numShow('9')" id="number-btn" class="cal-button">9</div>
+                <div onclick="numShow('-')" class="operator cal-button">-</div>
+                <div onclick="numShow('4')" class="cal-button">4</div>
+                <div onclick="numShow('5')" class="cal-button">5</div>
+                <div onclick="numShow('6')" class="cal-button">6</div>
+                <div onclick="numShow('+')" class="operator cal-button">+</div>
+                <div onclick="numShow('1')" class="cal-button ">1</div>
+                <div onclick="numShow('2')" class="cal-button">2</div>
+                <div onclick="numShow('3')" class="cal-button">3</div>
+                <div onclick="numShow('/')" class="operator cal-button">/</div>
+
+
+                <div onclick="numShow('00')" class="cal-button">00</div>
+
+
+
+                <div onclick="numShow('0')" class="cal-button">0</div>
+
+                <div onclick="numShow('.')" class="cal-button">.</div>
+                <div onclick="calculate('=')" class="operator cal-button bg-green-600">=</div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>

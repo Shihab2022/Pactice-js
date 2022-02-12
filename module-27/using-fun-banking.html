@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- telwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center font-medium my-10  ">Let's get some <span class="text-yellow-600">Moooooooney </span>!!!!! </h1>
+    </header>
+
+    <main class=" w-3/4 mx-auto ">
+        <!-- balense and transition -->
+
+        <section class="mt-8">
+            <div class="grid grid-cols-3 gap-4 text-white">
+
+                <div class="bg-blue-400 p-8 rounded">
+                    <h3 class="text-2xl">Deposit</h3>
+                    <h4 class="text-4xl">$<span id="deposit-total">00</span> </h4>
+                </div>
+                <div class="bg-green-400 p-8 rounded">
+                    <h3 class="text-2xl">Withdraw</h3>
+                    <h4 class="text-4xl">$ <span id="withdraw-total"> 00</span> </h4>
+                </div>
+                <div class="bg-yellow-400 p-8 rounded">
+                    <h3 class="text-2xl">Balance</h3>
+                    <h4 class="text-4xl">$ <span id="balance-total">1350</span></h4>
+                </div>
+
+            </div>
+        </section>
+        <!-- deposite and widrow -->
+
+        <section class="mt-8">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-red-100 p-8 rounded">
+                    <h3 class="text-2xl ml-2 mb-4">
+                        Please Deposit
+                    </h3>
+                    <input type="email" class="block w-3/4 mb-4  py-2 rounded-lg  px-2 border-solid border-2 border-zinc-900  " name="" placeholder="$ amount you want to deposit " id="deposit-input">
+                    <button onclick="dipositeBalence()" id="deposit-button" class="mb-2 ml-2  bg-amber-900 py-2 px-4 rounded  text-slate-200">Deposit</button>
+                </div>
+                <div class="bg-purple-100 p-8 rounded">
+                    <h3 class="text-2xl ml-2 mb-4">
+                        Please Withdraw
+                    </h3>
+                    <input type="email" class="block w-3/4 mb-4  py-2 rounded-lg  px-2  border-solid border-2 border-zinc-900  " name="" placeholder="$ amount you want to Withdraw " id="withdraw-input">
+                    <button id="withdraw-button" class="mb-2 ml-2  bg-amber-900 py-2 px-4 rounded  text-slate-200">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="using-fun-banking.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3 id="captuer">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, aliquid.</h3>
+    <!-- <h2 id="setAttribute">Lorem ipsum dolor sit amet.</h2> -->
+
+    <input type="text" placeholder="enter your text" id="setAttribute">
+    <script>
+        const h3Item = document.getElementById("captuer");
+        h3Item.style.textAlign = 'center';
+        h3Item.style.color = 'white';
+        h3Item.style.fontSize = '1.5rem';
+        h3Item.style.border = '2px solid red';
+        h3Item.style.padding = '30px 50px';
+        h3Item.style.backgroundColor = 'salmon';
+    </script>
+    <script>
+        const secondTaitel = document.getElementById('setAttribute');
+
+        secondTaitel.onclick = function() {
+            secondTaitel.setAttribute('value', 'I set tooltip using js .');
+
+        }
+    </script>
+</body>
+
+</html>

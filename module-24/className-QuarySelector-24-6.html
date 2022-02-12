@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 class=" headerTag">Lorem ipsum dolor sit amet.</h3>
+    <h4 class="quarrayselector">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, repudiandae illum. Velit id aliquid inventore dolor. Omnis cum aliquid ipsa inventore ullam numquam qui nisi veniam, quibusdam similique vitae excepturi?</h4>
+    <p class="quarrayselectorAll">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi perferendis eaque vel voluptatem aspernatur, nobis perspiciatis obcaecati ab expedita iure atque cum unde libero possimus reprehenderit sed voluptas. Consequatur quis soluta non voluptatum,
+        nobis quos aliquam quod ratione expedita consequuntur.</p>
+    <p class="quarrayselectorAll">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi perferendis eaque vel voluptatem aspernatur, nobis perspiciatis obcaecati ab expedita iure atque cum unde libero possimus reprehenderit sed voluptas. Consequatur quis soluta non voluptatum,
+        nobis quos aliquam quod ratione expedita consequuntur.</p>
+    <p class="quarrayselectorAll">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi perferendis eaque vel voluptatem aspernatur, nobis perspiciatis obcaecati ab expedita iure atque cum unde libero possimus reprehenderit sed voluptas. Consequatur quis soluta non voluptatum,
+        nobis quos aliquam quod ratione expedita consequuntur.</p>
+
+
+
+    <script>
+        // for class=""
+
+
+        const blog = document.getElementsByClassName('headerTag');
+        for (const blogs of blog) {
+            blogs.style.textAlign = 'center';
+            blogs.style.color = 'white';
+            blogs.style.fontSize = '1.5rem';
+            blogs.style.border = '2px solid red';
+            blogs.style.padding = '30px 50px';
+            blogs.style.backgroundColor = 'salmon';
+        }
+    </script>
+    <script>
+        // quarrayselector
+
+        const myBlog = document.querySelector('.quarrayselector');
+        myBlog.style.backgroundColor = 'skyBlue';
+
+
+        // for quarrayselectorAll
+
+        const blogs = document.querySelectorAll('.quarrayselectorAll');
+
+        for (const blog of blogs) {
+
+            blog.style.backgroundColor = 'red';
+        }
+    </script>
+</body>
+
+</html>
