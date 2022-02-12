@@ -32,11 +32,13 @@ function addTwoNumber(num1, num2) {
 
 function dipositeBalence() {
     const dipositetotal = document.getElementById('deposit-total');
-
-    dipositetotal.innerText = addTwoNumber(getValueFromInput(), previosBalence())
+    const getValueInputFrom = getValueFromInput();
+    const previousDiposite = previosBalence();
+    dipositetotal.innerText = addTwoNumber(getValueInputFrom, previousDiposite)
 
     const preBalence = document.getElementById('balance-total');
-    preBalence.innerText = addTwoNumber(getValueFromInput(), balenseTotal())
+    const previousBalece = balenseTotal();
+    preBalence.innerText = addTwoNumber(previousBalece, getValueInputFrom)
 
 
 }
