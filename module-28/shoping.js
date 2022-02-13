@@ -13,6 +13,9 @@ function updateCaseNumber(condition, buttonId, price, total) {
     //update total case number
     const caseTotal = document.getElementById(total);
     caseTotal.innerText = caseValue * price;
+
+    // calculate total
+    calculateTotal()
 }
 
 
@@ -34,3 +37,27 @@ document.getElementById('case-plus').addEventListener('click', function() {
 document.getElementById('case-minus').addEventListener('click', function() {
     updateCaseNumber(false, 'case-number', 59, 'case-total');
 })
+
+// calculate total
+
+function getInputValue(getId) {
+
+    const produnctInput = document.getElementById(getId);
+    const productNumber = parseInt(produnctInput.value);
+    return productNumber;
+}
+
+function calculateTotal() {
+    const phoneTotal = getInputValue('phone-number') * 1219;
+    const caseTotal = getInputValue('case-number') * 59;
+    const subTotal = caseTotal + phoneTotal;
+    const taxAmount = subTotal / 10; //10 presten tax ar jonno 
+    const totalAmount = taxAmount + subTotal;
+    // update input
+    document.getElementById('sub-total').innerText = subTotal;
+    document.getElementById('tax-amount').innerText = taxAmount;
+    document.getElementById('total-price').innerText = totalAmount;
+    console.log(phoneTotal, caseTotal);
+}
+
+// remove-input
