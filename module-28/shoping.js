@@ -61,3 +61,10 @@ function calculateTotal() {
 }
 
 // remove-input
+/* document.getElementById('remove-input').addEventListener('click', function() {
+
+    const clearFunction = document.getElementById('phone-number');
+    clearFunction.value = '0';
+    const clearFunction = document.getElementById('case-number');
+    clearFunction.value = '0';
+}) */
