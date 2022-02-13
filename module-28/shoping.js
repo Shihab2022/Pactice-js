@@ -1,5 +1,5 @@
-function updateCaseNumber(condition) {
-    const caseNumber = document.getElementById('case-number');
+function updateCaseNumber(condition, buttonId, price, total) {
+    const caseNumber = document.getElementById(buttonId);
     let caseValue = caseNumber.value;
 
     if (condition == true) {
@@ -11,13 +11,25 @@ function updateCaseNumber(condition) {
     caseNumber.value = caseValue;
 
     //update total case number
-    const caseTotal = document.getElementById('case-total');
-    caseTotal.innerText = caseValue * 59;
+    const caseTotal = document.getElementById(total);
+    caseTotal.innerText = caseValue * price;
 }
+
+//case for total
 document.getElementById('case-plus').addEventListener('click', function() {
-    updateCaseNumber(true);
+    updateCaseNumber(true, 'case-number', 59, 'case-total');
 })
 
 document.getElementById('case-minus').addEventListener('click', function() {
-    updateCaseNumber(false);
+    updateCaseNumber(false, 'case-number', 59, 'case-total');
+})
+
+//case for phone
+
+document.getElementById('phone-plus').addEventListener('click', function() {
+    updateCaseNumber(true, 'phone-number', 1219, 'phone-total');
+})
+
+document.getElementById('phone-minus').addEventListener('click', function() {
+    updateCaseNumber(false, 'phone-number', 1219, 'phone-total');
 })
