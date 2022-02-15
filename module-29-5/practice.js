@@ -46,7 +46,27 @@ document.getElementById('add-button').addEventListener('click', function() {
 /* 
 ৪.এখন  ul এর নিচে একটা ইনপুট ফিল্ ড আর একটা বাটন যো গ করো। ইনপুট ফিল্ ড এ শুরুতে মান হবে শূন্ য(০)। তারপর ইনপুট ফিল্ ডের পাশের নতুন বাটন এ যতবার প্ রেস করবে ততবার এক এক করে ইনপুট ফিল্ ড এর মান এক এক করে বাড়বে। */
 
-let count = 0;
+// let count = 0;
+// document.getElementById('minus-num').addEventListener('click', function() {
+
+//     const getTex = document.getElementById('input-field');
+//     let countValue = count--;
+//     if (countValue >= 0) {
+//         getTex.value = countValue;
+//     }
+
+// })
+// document.getElementById('add-num').addEventListener('click', function() {
+
+//     const getTex = document.getElementById('input-field');
+//     getTex.value = count++;
+
+// })
+
+
+/* ৫.(চ্যালেঞ্জিং ওয়ান)উপরে বাটনে দুইটা শর্ত আছে। সেটা হচ্ছে সংখ্যা বাড়লেও সেটা হবে সর্বোচ্চ ৫। অর্থাৎ ০ থেকে এক এক করে বেড়ে বেড়ে পাঁচ পর্যন্ত হতে পারে। তার উপরে আর বাড়বে না। এবং ৫ হয়ে গেলে বাটনটা ডিজেবল হয়ে যাবে।  */
+
+/* let count = 0;
 document.getElementById('minus-num').addEventListener('click', function() {
 
     const getTex = document.getElementById('input-field');
@@ -54,17 +74,18 @@ document.getElementById('minus-num').addEventListener('click', function() {
     if (countValue >= 0) {
         getTex.value = countValue;
     }
-
 })
-document.getElementById('add-num').addEventListener('click', function() {
-
-    const getTex = document.getElementById('input-field');
-    getTex.value = count++;
-
-})
-
-
-/* ৫.(চ্ যালেঞ্ জিং ওয়ান) উপরে বাটনে দুইটা শর্ ত আছে। সেটা হচ্ ছে সংখ্ যা বাড়লেও সেটা হবে সর্ বো চ্ চ৫। অর্ থাৎ০ থেকে এক এক করে বেড়ে বেড়ে পাঁচ পর্ যন্ ত হতে পারে। তার উপরে আর বাড়বে না। এবং৫ হয়ে গেলে বাটনটা ডিজেবল হয়ে যাবে। */
+document.getElementById('add-num').addEventListener('click', function(e) {
+        const getTex = document.getElementById('input-field');
+        let countValue = count++
+            if (countValue <= 5) {
+                getTex.value = countValue;
+            } 
+            //dusay bol korty parlam na ayta dakty hobay
+            else {
+                e.disabled = true;
+            }
+    }) */
 
 
 /* ৬.শপিং কার্ ট এর ডিজাইন দেখো। তারপর নিজে নিজে HTML, CSS(মন চাইলে কো ন ফ্ রেমওয়ার্ ক বুটস্ ট্ র্ যাপ বা টেইলউইন্ ড) দিয়ে অথবা css৩ দিয়ে নিজে নিজে সিম্ পল সাইট বানিয়ে ফল। */
@@ -72,3 +93,10 @@ document.getElementById('add-num').addEventListener('click', function() {
 
 /* 
 ৭. তারপর শপিং কার্ ট প্ রজেক্ টটা ইন্ টারএকটিভ করার কাজটা নিজে নিজে করো। একটা শর্ ত রাখতে পারো যে--আমাদের ভিডিও না দেখে করতে পারো কিনা। যদি আমাদের ভিডিও না দেখে করতে পারো। তাহলে সেটা খুবই চমৎকার হবে। আমাদের ভিডিও না দেখলেও গুগল বা ইউটিউবে সার্ চ দিতে পারবে। আর যদি একান্ তই করতে না পারো। তাহলে টুক করে আমাদের ভিডিও দেখে ফেলো। */
+
+/* স্ট্রিং এবং array 
+৮. একটা array এর মধ্যে অনেকগুলা ইংরেজি জাভাস্ক্রিপ্ট রিলেটেড বইয়ের নাম (স্ট্রিং) আছে। জাভাস্ক্রিপ্ট রিলেটেড বইয়ের নাম না জানলে, গুগলে সার্চ দিয়ে বের করো। তারপর একটা লুপ চালিয়ে দেখো কোন কোন বইয়ের নামের মধ্যে "javascript" আছে। তাহলে সেই বইগুলার নাম আরেকটা array এর মধ্যে রাখবে। আর হ্যাঁ, যখন javascript আছে কিনা চেক করবে তখন খেয়াল করবে বড়হাতের নাকি ছোট হাতের অক্ষর সেটা বাদ দিয়ে চেক করতে। অর্থাৎ কেইস ইনসেন্সিটিভ হবে। 
+ */
+
+
+/* ৯. অনেকগুলা সংখ্যাওয়ালা একটা array নাও। তারপর সেই array কে sort করো। sort হবে ছোট থেকে বড় সংখ্যার সিরিয়াল অনুসারে।  */
