@@ -12,7 +12,7 @@
 
 // ul add
 
-document.getElementById('add-ul-button').addEventListener('click', function() {
+/* document.getElementById('add-ul-button').addEventListener('click', function() {
     const createUl = document.createElement('ul');
     createUl.innerHTML = ` <li>add-1</li> 
         <li>add-2</li>
@@ -20,10 +20,10 @@ document.getElementById('add-ul-button').addEventListener('click', function() {
 
     const parent = document.getElementById('add-ul');
     parent.appendChild(createUl);
-})
+}) */
 
 // add li
-
+/* 
 document.getElementById('add-button').addEventListener('click', function() {
 
     const createLi = document.createElement('li');
@@ -36,7 +36,7 @@ document.getElementById('add-button').addEventListener('click', function() {
 
 
 })
-
+ */
 
 
 
@@ -46,6 +46,22 @@ document.getElementById('add-button').addEventListener('click', function() {
 /* 
 ৪.এখন  ul এর নিচে একটা ইনপুট ফিল্ ড আর একটা বাটন যো গ করো। ইনপুট ফিল্ ড এ শুরুতে মান হবে শূন্ য(০)। তারপর ইনপুট ফিল্ ডের পাশের নতুন বাটন এ যতবার প্ রেস করবে ততবার এক এক করে ইনপুট ফিল্ ড এর মান এক এক করে বাড়বে। */
 
+let count = 0;
+document.getElementById('minus-num').addEventListener('click', function() {
+
+    const getTex = document.getElementById('input-field');
+    let countValue = count--;
+    if (countValue >= 0) {
+        getTex.value = countValue;
+    }
+
+})
+document.getElementById('add-num').addEventListener('click', function() {
+
+    const getTex = document.getElementById('input-field');
+    getTex.value = count++;
+
+})
 
 
 /* ৫.(চ্ যালেঞ্ জিং ওয়ান) উপরে বাটনে দুইটা শর্ ত আছে। সেটা হচ্ ছে সংখ্ যা বাড়লেও সেটা হবে সর্ বো চ্ চ৫। অর্ থাৎ০ থেকে এক এক করে বেড়ে বেড়ে পাঁচ পর্ যন্ ত হতে পারে। তার উপরে আর বাড়বে না। এবং৫ হয়ে গেলে বাটনটা ডিজেবল হয়ে যাবে। */
