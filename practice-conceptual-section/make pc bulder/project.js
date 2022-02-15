@@ -27,10 +27,14 @@ function getButtonId(getButtonId, getCost, price) {
     })
 }
 
-getButtonId('sixteenGB', 'memory-cost', 200)
+getButtonId('sixteenGB', 'memory-cost', 200) //buttton ID ; jay jai gai add korbo tar id ;koto price//
+getButtonId('eightGB', 'memory-cost', 0)
+
+// storage-cost
+
+getButtonId('ssd1', 'storage-cost', 0)
+getButtonId('ssd2', 'storage-cost', 350)
+getButtonId('ssd3', 'storage-cost', 700)
+getButtonId('paid-delivery', 'delivery-cost', 20)
+getButtonId('free-delivery', 'delivery-cost', 0)
     // for ssd
-
-document.getElementById('ssd2').addEventListener('click', function() {
-
-    globalFunction('storage-cost', 500)
-})
