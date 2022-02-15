@@ -38,3 +38,20 @@ getButtonId('ssd3', 'storage-cost', 700)
 getButtonId('paid-delivery', 'delivery-cost', 20)
 getButtonId('free-delivery', 'delivery-cost', 0)
     // for ssd
+
+document.getElementById('apply-btn').addEventListener('click', function() {
+
+    const inputText = document.getElementById('promo-input');
+    const inputValue = inputText.value;
+    const total = document.getElementById('total-price');
+    const preValue = parseFloat(total.innerText);
+    const currentValue = preValue - (preValue * .2);
+    const cuponCode = 'mdShihabUddin';
+
+    if (inputValue == cuponCode) {
+        total.innerText = currentValue;
+    } else {
+        alert('Your promo code is not currect')
+    }
+    inputText.value = '';
+})
