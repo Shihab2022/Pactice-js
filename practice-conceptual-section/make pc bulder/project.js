@@ -1,17 +1,36 @@
-document.getElementById('sixteenGB').addEventListener('click', function() {
+function getValue(giveId) {
+    const delevarCost = document.getElementById(giveId).innerText;
+    return delevarCost;
+}
 
-    const memoryCost = document.getElementById('memory-cost');
-    memoryCost.innerText = 200;
+// function 
 
-    const bestPrice = document.getElementById('best-price').innerText;
-    const storageCost = document.getElementById('storage-cost').innerText;
-    const memoryPrice = document.getElementById('memory-cost').innerText;
-    const delevarCost = document.getElementById('delivery-cost').innerText;
+function globalFunction(getId, price) {
+    const memoryCost = document.getElementById(getId);
+    memoryCost.innerText = price;
+
+    const bestPrice = getValue('best-price');
+    const storageCost = getValue('storage-cost');
+    const memoryPrice = getValue('memory-cost');
+    const delevarCost = getValue('delivery-cost');
 
 
     const totalCost = parseFloat(bestPrice) + parseFloat(storageCost) + parseFloat(delevarCost) + parseFloat(memoryPrice);
-    console.log(memoryCost);
     const total = document.getElementById('total-price');
     total.innerText = totalCost;
-    console.log(totalCost);
+}
+
+function getButtonId(getButtonId, getCost, price) {
+    document.getElementById(getButtonId).addEventListener('click', function() {
+        globalFunction(getCost, price);
+
+    })
+}
+
+getButtonId('sixteenGB', 'memory-cost', 200)
+    // for ssd
+
+document.getElementById('ssd2').addEventListener('click', function() {
+
+    globalFunction('storage-cost', 500)
 })
