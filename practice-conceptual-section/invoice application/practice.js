@@ -20,9 +20,18 @@ document.getElementById('add-details-btn').addEventListener('click', function() 
 
     const totalValue = parseFloat(getPrice.value) * parseFloat(quantityInput.value);
 
-    // console.log(getName.value)
-    // console.log(getPrice.value)
-    // console.log(quantityInput.value)
+    if (
+        getName.value == "" ||
+        getPrice.value < 0 ||
+        quantityInput.value < 0 ||
+        getPrice.value == "" ||
+        quantityInput.value == ""
+    ) {
+        alert('Please enter all values')
+        return;
+    }
+
+
     let tr = createElement('tr');
     let td1 = createElement('td');
     let td2 = createElement('td');
