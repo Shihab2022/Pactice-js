@@ -3,9 +3,25 @@
     padding: 0;
 }
 
-li {
+
+/* li {
     list-style: none;
     font-weight: bold;
     font-size: 30px;
     color: rgb(222, 222, 33)
+} */
+
+
+/* card section */
+
+.hr {
+    border: 4px solid black;
+    border-radius: 5px;
+}
+
+.slide-secretion {
+    background-color: DarkKhaki;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
